@@ -1,7 +1,7 @@
 # Sportowy VIBE — Redesign
 
 ## 1. Project Description
-Official website for Sportowy VIBE — a Polish YouTube sports channel by Robert and Michał. The site presents channel news, formats, team info, timeline, stats, goals, partners, and contact. Target audience: sports fans, potential partners, and the community.
+Official website for Sportowy VIBE - a Polish YouTube sports channel by Robert and Michał. The site presents channel news, formats, team info, timeline, stats, goals, partners, and contact. Target audience: sports fans, potential partners, and the community.
 
 ## 2. Page Structure
 - `/` - Home (single-page with all sections)
