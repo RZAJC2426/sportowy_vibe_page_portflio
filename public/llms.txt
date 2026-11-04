@@ -1,0 +1,41 @@
+# Sportowy VIBE
+
+> Sportowa Energia Każdego Dnia — kanał YouTube tworzony przez Roberta i Michała. Ekspercka wiedza, pasja i analizy najważniejszych wydarzeń sportowych.
+
+## Główne sekcje witryny
+
+- [Aktualności sportowe](/aktualnosci)
+- [Nasz kanał](/nasz-kanal)
+- [Certyfikacja](/certyfikacja)
+- [Partnerzy](/#partnerzy)
+- [O nas](/o-nas)
+- [Strefa kibica](/strefa-kibica)
+- [Kontakt i współpraca](/o-nas/wspolpraca)
+
+## Dyscypliny sportowe
+
+- [Tenis](/dyscyplina/tenis)
+- [Siatkówka](/dyscyplina/siatkowka)
+- [Piłka nożna](/dyscyplina/pilka-nozna)
+- [Koszykówka](/dyscyplina/koszykowka)
+- [Hokej na lodzie](/dyscyplina/hokej)
+- [Skoki narciarskie](/dyscyplina/skoki-narciarskie)
+- [Inne dyscypliny](/dyscyplina/inne)
+
+## Social media
+
+- [YouTube](https://www.youtube.com/@sportowy_vibe)
+- [Facebook](https://www.facebook.com/sportowy_vibe)
+- [Instagram](https://www.instagram.com/sportowy_vibe)
+- [Twitch](https://www.twitch.tv/SportowyVIBE)
+
+## Dane kontaktowe
+
+- E-mail biznesowy: [biznes@sportowyvibe.pl](mailto:biznes@sportowyvibe.pl)
+- E-mail techniczny: [kontakt@sportowyvibe.pl](mailto:kontakt@sportowyvibe.pl)
+
+## Ważne strony
+
+- [Regulamin serwisu](/regulamin-serwisu)
+- [Polityka prywatności](/polityka-prywatnosci)
+- [RODO](/rodo)
