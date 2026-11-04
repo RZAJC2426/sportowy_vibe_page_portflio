@@ -1,0 +1,774 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary: Turkus / Cyjan #38b6ff */
+    --primary-50: 0.97 0.03 233;
+    --primary-100: 0.95 0.05 233;
+    --primary-200: 0.92 0.08 233;
+    --primary-300: 0.85 0.12 233;
+    --primary-400: 0.77 0.15 233;
+    --primary-500: 0.68 0.174 233;
+    --primary-600: 0.58 0.175 233;
+    --primary-700: 0.48 0.16 233;
+    --primary-800: 0.38 0.12 233;
+    --primary-900: 0.28 0.08 233;
+    --primary-950: 0.18 0.05 233;
+
+    /* Accent: Warm Energetic Orange/Coral — complements turquoise */
+    --accent-50: 0.97 0.03 45;
+    --accent-100: 0.95 0.05 45;
+    --accent-200: 0.90 0.09 45;
+    --accent-300: 0.82 0.14 45;
+    --accent-400: 0.74 0.18 45;
+    --accent-500: 0.65 0.20 45;
+    --accent-600: 0.55 0.20 45;
+    --accent-700: 0.45 0.18 45;
+    --accent-800: 0.37 0.14 45;
+    --accent-900: 0.28 0.10 45;
+    --accent-950: 0.20 0.07 45;
+
+    /* Secondary: Slate Gray */
+    --secondary-50: 0.97 0.01 260;
+    --secondary-100: 0.94 0.02 260;
+    --secondary-200: 0.88 0.03 260;
+    --secondary-300: 0.80 0.04 260;
+    --secondary-400: 0.70 0.04 260;
+    --secondary-500: 0.55 0.04 260;
+    --secondary-600: 0.48 0.04 260;
+    --secondary-700: 0.40 0.04 260;
+    --secondary-800: 0.30 0.03 260;
+    --secondary-900: 0.22 0.03 260;
+    --secondary-950: 0.15 0.02 260;
+
+    /* Background: Light / White */
+    --background-50: 0.99 0.005 260;
+    --background-100: 0.97 0.01 260;
+    --background-200: 0.93 0.015 260;
+    --background-300: 0.88 0.02 260;
+    --background-400: 0.80 0.02 260;
+    --background-500: 0.70 0.02 260;
+    --background-600: 0.60 0.02 260;
+    --background-700: 0.50 0.02 260;
+    --background-800: 0.40 0.02 260;
+    --background-900: 0.30 0.02 260;
+    --background-950: 0.20 0.02 260;
+
+    /* Foreground: Dark Slate */
+    --foreground-50: 0.98 0.03 260;
+    --foreground-100: 0.94 0.03 260;
+    --foreground-200: 0.88 0.03 260;
+    --foreground-300: 0.82 0.03 260;
+    --foreground-400: 0.72 0.03 260;
+    --foreground-500: 0.62 0.03 260;
+    --foreground-600: 0.52 0.03 260;
+    --foreground-700: 0.42 0.03 260;
+    --foreground-800: 0.32 0.03 260;
+    --foreground-900: 0.22 0.03 260;
+    --foreground-950: 0.15 0.03 260;
+
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-label: "Inter", system-ui, sans-serif;
+  }
+
+  .dark {
+    /* Primary: Turkus / Cyjan #38b6ff — identical hue, matched lightness */
+    --primary-50: 0.15 0.03 233;
+    --primary-100: 0.22 0.05 233;
+    --primary-200: 0.32 0.08 233;
+    --primary-300: 0.45 0.11 233;
+    --primary-400: 0.58 0.14 233;
+    --primary-500: 0.72 0.158 233;
+    --primary-600: 0.65 0.15 233;
+    --primary-700: 0.55 0.13 233;
+    --primary-800: 0.42 0.10 233;
+    --primary-900: 0.30 0.07 233;
+    --primary-950: 0.20 0.04 233;
+
+    /* Accent: Warm Energetic Orange/Coral — complements turquoise */
+    --accent-50: 0.15 0.04 45;
+    --accent-100: 0.22 0.06 45;
+    --accent-200: 0.32 0.09 45;
+    --accent-300: 0.45 0.13 45;
+    --accent-400: 0.58 0.17 45;
+    --accent-500: 0.72 0.19 45;
+    --accent-600: 0.65 0.17 45;
+    --accent-700: 0.55 0.15 45;
+    --accent-800: 0.42 0.11 45;
+    --accent-900: 0.30 0.08 45;
+    --accent-950: 0.20 0.05 45;
+
+    /* Secondary: Slate Gray */
+    --secondary-50: 0.18 0.02 260;
+    --secondary-100: 0.25 0.02 260;
+    --secondary-200: 0.35 0.03 260;
+    --secondary-300: 0.48 0.03 260;
+    --secondary-400: 0.62 0.04 260;
+    --secondary-500: 0.74 0.04 260;
+    --secondary-600: 0.82 0.03 260;
+    --secondary-700: 0.88 0.02 260;
+    --secondary-800: 0.93 0.02 260;
+    --secondary-900: 0.96 0.01 260;
+    --secondary-950: 0.98 0.005 260;
+
+    /* Background: dark tones */
+    --background-50: 0.15 0.02 260;
+    --background-100: 0.18 0.02 260;
+    --background-200: 0.24 0.025 260;
+    --background-300: 0.30 0.03 260;
+    --background-400: 0.38 0.03 260;
+    --background-500: 0.48 0.03 260;
+    --background-600: 0.58 0.03 260;
+    --background-700: 0.68 0.03 260;
+    --background-800: 0.78 0.02 260;
+    --background-900: 0.88 0.02 260;
+    --background-950: 0.95 0.01 260;
+
+    /* Foreground: light tones for text on dark bg */
+    --foreground-50: 0.12 0.01 260;
+    --foreground-100: 0.20 0.02 260;
+    --foreground-200: 0.30 0.02 260;
+    --foreground-300: 0.42 0.03 260;
+    --foreground-400: 0.55 0.03 260;
+    --foreground-500: 0.65 0.03 260;
+    --foreground-600: 0.75 0.03 260;
+    --foreground-700: 0.85 0.02 260;
+    --foreground-800: 0.92 0.02 260;
+    --foreground-900: 0.96 0.01 260;
+    --foreground-950: 0.98 0.005 260;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: oklch(var(--background-50));
+    color: oklch(var(--foreground-950));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Płynna animacja przejścia między motywami — scoped to body only for performance */
+  html {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  }
+
+  /* Wyłączenie animacji dla użytkowników preferujących redukcję ruchu */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+    }
+  }
+}
+
+/* Honeypot anti-spam — certyfikacja form */
+.cert-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Global honeypot class for all forms */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Animacje hero */
+@keyframes hero-zoom-in {
+  from {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-hero-slide-up {
+  animation: hero-slide-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-hero-fade {
+  animation: hero-fade-in 0.8s ease-out forwards;
+}
+
+.delay-hero-1 { animation-delay: 0.15s; }
+.delay-hero-2 { animation-delay: 0.3s; }
+.delay-hero-3 { animation-delay: 0.45s; }
+.delay-hero-4 { animation-delay: 0.6s; }
+
+/* Hero elements — ALWAYS visible, animation is purely additive (no hiding) */
+.hero-animate-init {
+  opacity: 1;
+}
+
+/* ====== 3D Certificate Animation ====== */
+@keyframes cert-float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(-5deg) rotateX(3deg);
+  }
+  50% {
+    transform: translateY(-12px) rotateY(5deg) rotateX(-2deg);
+  }
+}
+
+@keyframes cert-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes cert-glow-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.cert-3d-container {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.cert-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.cert-3d-card.auto-animate {
+  animation: cert-float 6s ease-in-out infinite;
+}
+
+.cert-3d-card:hover {
+  animation-play-state: paused;
+}
+
+.cert-3d-shadow {
+  transform: translateZ(-60px) rotateX(70deg) scale(0.85);
+  filter: blur(24px);
+  opacity: 0.35;
+  transition: all 0.15s ease-out;
+}
+
+.cert-3d-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255,255,255,0.18) 45%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.18) 55%,
+    transparent 60%
+  );
+  background-size: 200% 200%;
+  pointer-events: none;
+  animation: cert-shimmer 4s linear infinite;
+  mix-blend-mode: overlay;
+}
+
+.cert-3d-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 50%, oklch(var(--primary-500) / 0.12), transparent 75%);
+  filter: blur(40px);
+  pointer-events: none;
+  animation: cert-glow-pulse 5s ease-in-out infinite;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  will-change: transform, opacity;
+}
+
+/* ====== Page Transitions ====== */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-in {
+  animation: page-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ====== Logo Hover Animation ====== */
+@keyframes logo-pulse {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: brightness(1.08) drop-shadow(0 0 6px oklch(var(--primary-500) / 0.4));
+  }
+}
+
+.nav-logo-img {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+}
+
+.nav-logo-img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  animation: logo-pulse 1.2s ease-in-out infinite;
+}
+
+/* ====== Nasze Filmy Page Transition Animations ====== */
+
+/* Removed global will-change to prevent GPU memory exhaustion.
+   Browsers already promote transform/opacity animations to compositor layers
+   automatically when needed. */
+
+/* ====== Checklist (for EditableHTML rich text) ====== */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0;
+}
+.checklist li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.15em;
+  color: oklch(var(--primary-500));
+}
+
+/* ====== Rich Text Base Styles (for EditableText/EditableHTML dangerouslySetInnerHTML) ====== */
+/* Tailwind preflight removes list styles — restore them for user-formatted content */
+ul:not([class]) {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+ol:not([class]) {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+ul:not([class]) li,
+ol:not([class]) li {
+  display: list-item;
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+ul:not([class]) ul,
+ol:not([class]) ul {
+  list-style-type: circle;
+}
+ul:not([class]) ul ul,
+ol:not([class]) ul ul {
+  list-style-type: square;
+}
+blockquote:not([class]) {
+  border-left: 3px solid oklch(var(--primary-500));
+  padding: 0.5rem 1rem;
+  margin: 0.75rem 0;
+  background: oklch(var(--background-100) / 0.6);
+  border-radius: 0 0.375rem 0.375rem 0;
+  color: oklch(var(--foreground-700));
+  font-style: italic;
+}
+strong:not([class]), b:not([class]) {
+  font-weight: 700;
+}
+em:not([class]), i:not([class]) {
+  font-style: italic;
+}
+p:not([class]) {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+a:not([class]) {
+  color: oklch(var(--primary-600));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:not([class]):hover {
+  color: oklch(var(--primary-700));
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-tooltipIn {
+  animation: tooltipIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ====== HIGH CONTRAST MODE (Black & Yellow) ====== */
+/* Override ALL StyleSystem CSS variables to black/yellow palette.
+   This works because every Tailwind color class in the project
+   references these variables — no !important needed for colors. */
+html.hc-mode {
+  /* Background scale → all black */
+  --background-50: 0 0 0;
+  --background-100: 0.04 0 0;
+  --background-200: 0.08 0 0;
+  --background-300: 0.12 0 0;
+  --background-400: 0.16 0 0;
+  --background-500: 0.22 0 0;
+  --background-600: 0.30 0 0;
+  --background-700: 0.40 0 0;
+  --background-800: 0.52 0 0;
+  --background-900: 0.72 0 0;
+  --background-950: 0.92 0 0;
+
+  /* Foreground scale → all yellow (bright, readable on black) */
+  --foreground-50: 0.97 0.18 102;
+  --foreground-100: 0.94 0.18 102;
+  --foreground-200: 0.90 0.19 100;
+  --foreground-300: 0.86 0.19 98;
+  --foreground-400: 0.82 0.20 96;
+  --foreground-500: 0.78 0.20 96;
+  --foreground-600: 0.72 0.20 96;
+  --foreground-700: 0.65 0.19 96;
+  --foreground-800: 0.55 0.18 96;
+  --foreground-900: 0.45 0.17 96;
+  --foreground-950: 0.35 0.16 96;
+
+  /* Primary scale → warm gold-yellow */
+  --primary-50: 0.97 0.20 100;
+  --primary-100: 0.94 0.20 100;
+  --primary-200: 0.90 0.20 98;
+  --primary-300: 0.87 0.20 96;
+  --primary-400: 0.84 0.19 95;
+  --primary-500: 0.85 0.19 95;
+  --primary-600: 0.78 0.19 95;
+  --primary-700: 0.68 0.18 95;
+  --primary-800: 0.55 0.17 95;
+  --primary-900: 0.42 0.15 95;
+  --primary-950: 0.30 0.12 95;
+
+  /* Accent scale → bright electric yellow */
+  --accent-50: 0.98 0.18 106;
+  --accent-100: 0.95 0.18 106;
+  --accent-200: 0.92 0.19 104;
+  --accent-300: 0.89 0.19 102;
+  --accent-400: 0.86 0.20 100;
+  --accent-500: 0.90 0.18 95;
+  --accent-600: 0.82 0.18 95;
+  --accent-700: 0.72 0.18 95;
+  --accent-800: 0.60 0.17 95;
+  --accent-900: 0.48 0.15 95;
+  --accent-950: 0.35 0.12 95;
+
+  /* Secondary scale → dark grays for supporting UI */
+  --secondary-50: 0.06 0 0;
+  --secondary-100: 0.10 0 0;
+  --secondary-200: 0.15 0 0;
+  --secondary-300: 0.22 0.01 0;
+  --secondary-400: 0.28 0.01 0;
+  --secondary-500: 0.35 0.01 0;
+  --secondary-600: 0.45 0.01 0;
+  --secondary-700: 0.55 0.01 0;
+  --secondary-800: 0.65 0.01 0;
+  --secondary-900: 0.78 0.01 0;
+  --secondary-950: 0.90 0.01 0;
+
+  /* Kill all decorative effects */
+  box-shadow: none !important;
+}
+
+/* ── Hide distracting graphical elements in HC mode ── */
+
+/* Background images and gradients — wipe them */
+html.hc-mode [style*="background-image"] {
+  background-image: none !important;
+}
+
+/* Gradient utility classes */
+html.hc-mode .bg-gradient-to-b,
+html.hc-mode .bg-gradient-to-t,
+html.hc-mode .bg-gradient-to-l,
+html.hc-mode .bg-gradient-to-r,
+html.hc-mode .bg-gradient-to-bl,
+html.hc-mode .bg-gradient-to-br,
+html.hc-mode .bg-gradient-to-tl,
+html.hc-mode .bg-gradient-to-tr {
+  background-image: none !important;
+}
+
+/* Hero overlay gradients — remove the dark tint layer */
+html.hc-mode [class*="from-black/"],
+html.hc-mode [class*="from-black"],
+html.hc-mode [class*="to-black/"],
+html.hc-mode [class*="via-black/"] {
+  background-image: none !important;
+}
+
+/* Backdrop blur — disable (it's visual noise in HC) */
+html.hc-mode .backdrop-blur-sm,
+html.hc-mode .backdrop-blur,
+html.hc-mode .backdrop-blur-md,
+html.hc-mode .backdrop-blur-lg,
+html.hc-mode .backdrop-blur-xl,
+html.hc-mode [class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Shadows — remove all */
+html.hc-mode .shadow-sm,
+html.hc-mode .shadow,
+html.hc-mode .shadow-md,
+html.hc-mode .shadow-lg,
+html.hc-mode .shadow-xl,
+html.hc-mode .shadow-2xl,
+html.hc-mode [class*="shadow-"] {
+  box-shadow: none !important;
+}
+
+/* Non-functional images — dim them heavily */
+html.hc-mode img:not([alt*="logo" i]):not([alt*="icon" i]):not([alt*="ikona" i]),
+html.hc-mode video,
+html.hc-mode svg:not([data-hc-keep]) {
+  opacity: 0.2;
+  filter: grayscale(100%) brightness(0.4);
+}
+
+/* Content images in articles — slightly more visible */
+html.hc-mode article img,
+html.hc-mode .article-content img {
+  opacity: 0.35;
+}
+
+/* Decorative icons / animated elements — hide completely */
+html.hc-mode .cert-3d-shine,
+html.hc-mode .cert-3d-glow,
+html.hc-mode [class*="animate-"],
+html.hc-mode [class*="motion-safe"] {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* ── Stronger focus outlines ── */
+html.hc-mode *:focus-visible {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 3px !important;
+}
+
+html.hc-mode *:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* ── Selection colors ── */
+html.hc-mode ::selection {
+  background: #FFD700 !important;
+  color: #000000 !important;
+}
+
+/* ── Override hardcoded white/black text in HC mode ── */
+html.hc-mode .text-white {
+  color: #000000 !important;
+}
+
+html.hc-mode .bg-white {
+  background-color: #000000 !important;
+}
+
+/* Any element with inline white text on buttons etc. — use black text on yellow bg */
+html.hc-mode [class*="bg-primary"] .text-white,
+html.hc-mode [class*="bg-accent"] .text-white {
+  color: #000000 !important;
+}
+
+/* ── Borders in HC — make them clearly visible yellow ── */
+html.hc-mode {
+  scrollbar-color: #FFD700 #000000;
+}
+
+html.hc-mode ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+html.hc-mode ::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+/* ====== FONT SIZE MODES ====== */
+html.fs-large {
+  font-size: 112.5%;
+}
+
+html.fs-xlarge {
+  font-size: 125%;
+}
+
+/* Prevent content loss at larger sizes */
+html.fs-large body,
+html.fs-xlarge body {
+  overflow-wrap: break-word;
+}
+
+/* Ensure containers don't clip text at larger sizes */
+html.fs-large .truncate,
+html.fs-xlarge .truncate {
+  white-space: normal;
+  overflow: visible;
+}
+
+html.fs-large [class*="line-clamp-"],
+html.fs-xlarge [class*="line-clamp-"] {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+/* ====== MOBILE PERFORMANCE — disable expensive GPU effects ====== */
+@media (max-width: 768px) {
+  /* Kill 3D certificate animation on mobile (saves GPU & battery) */
+  .cert-3d-card.auto-animate {
+    animation: none !important;
+  }
+  .cert-3d-glow {
+    display: none !important;
+  }
+  .cert-3d-shine {
+    display: none !important;
+  }
+  .cert-3d-shadow {
+    display: none !important;
+  }
+
+  /* Disable all backdrop-filter on mobile — huge compositor cost */
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Reduce nav logo hover animation complexity */
+  .nav-logo-img:hover {
+    animation: none !important;
+  }
+}
