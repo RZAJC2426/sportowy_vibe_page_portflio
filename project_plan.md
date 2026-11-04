@@ -58,7 +58,7 @@ Official website for Sportowy VIBE - a Polish YouTube sports channel by Robert a
 - Goal: Account deletion, admin user/role management, article restoration, photo galleries, auth-aware comments
 - Deliverable: Delete account via edge function, `/admin` panel with UsersManager (role management: user/moderator/admin), ArticlesManager with gallery support, gallery display on article pages, comments login opens AuthModal instead of redirecting.
 - Database: Added `gallery` JSONB column to articles, RLS policies for admin read/update/delete on profiles.
-- Edge Functions: `delete-user-account` — handles cascading delete of comments, profile, and auth user.
+- Edge Functions: `delete-user-account` - handles cascading delete of comments, profile, and auth user.
 
 ### Phase 5: Admin Panel - Content, Colors, Images + Complete Editability ✅
 - Goal: Full CMS-like admin panel with text/image/color editing across all pages
