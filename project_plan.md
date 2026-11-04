@@ -1,4 +1,4 @@
-# Sportowy VIBE — Redesign
+# Sportowy VIBE - Redesign
 
 ## 1. Project Description
 Official website for Sportowy VIBE - a Polish YouTube sports channel by Robert and Michał. The site presents channel news, formats, team info, timeline, stats, goals, partners, and contact. Target audience: sports fans, potential partners, and the community.
@@ -25,7 +25,7 @@ Official website for Sportowy VIBE - a Polish YouTube sports channel by Robert a
 - [x] Partners section with collaboration CTA
 - [x] Contact section with form
 - [x] Footer
-- [x] `/nasze-filmy` — YouTube video grid with auto-refresh (15min), Supabase Edge Function for RSS parsing, DB cache fallback
+- [x] `/nasze-filmy` - YouTube video grid with auto-refresh (15min), Supabase Edge Function for RSS parsing, DB cache fallback
 
 ## 4. Data Model Design
 - **youtube_videos_cache** (Supabase): Caches YouTube RSS feed results. Columns: video_id, title, thumbnail_url, published_at, description, views, channel_id, fetched_at.
@@ -60,11 +60,11 @@ Official website for Sportowy VIBE - a Polish YouTube sports channel by Robert a
 - Database: Added `gallery` JSONB column to articles, RLS policies for admin read/update/delete on profiles.
 - Edge Functions: `delete-user-account` — handles cascading delete of comments, profile, and auth user.
 
-### Phase 5: Admin Panel — Content, Colors, Images + Complete Editability ✅
+### Phase 5: Admin Panel - Content, Colors, Images + Complete Editability ✅
 - Goal: Full CMS-like admin panel with text/image/color editing across all pages
 - Deliverable: ContentManager, ColorsManager, ImagesManager tabs in admin. All h1-h4 elements wrapped with EditableText+EditableColor. All static images centrally manageable. File upload from computer. Scroll-to-top global button.
 
-### Phase 6: Security — Email Verification + TOTP 2FA ✅
+### Phase 6: Security - Email Verification + TOTP 2FA ✅
 - Goal: Email verification at signup and password change, TOTP two-factor authentication
 - Deliverable: Email verification view after signup with resend option. Verification code via Resend before password changes. Google Authenticator (TOTP) setup with QR code scan in account settings.
 - Edge Functions: `send-verification-code` (Resend), `totp-verify` (TOTP generate/verify/disable/check).
